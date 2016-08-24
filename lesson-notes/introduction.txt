@@ -1,0 +1,16 @@
+(this is my first time using a site like Udacity, so the notes will be a work in progress)
+
+Introduction:
+  This course will cover:
+    Fundamentals of how Android works
+    Android patterns and best practices
+    etc...
+
+  Also will have to do my own research on information, such as:
+    Sample code
+    Visiting the Android Developer Site
+    Android Developers on Google+
+    Android Developers on Twitter
+    Android Questions on Stack Overflow
+    Github Guides: https://guides.github.com/
+    etc...

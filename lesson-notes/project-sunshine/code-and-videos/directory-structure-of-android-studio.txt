@@ -1,0 +1,43 @@
+Directory Structure of Android Studio
+  Information found here:
+    https://developer.android.com/studio/projects/index.html
+
+Project
+  Contains everything that defines workspace for you app:
+    Source code
+    Assets
+    Gradle
+    Etc...
+
+Modules
+  Collection of source files and build settings
+    Allow you to divide project into discrete units of functionality
+
+  Project can contain many modules
+  A module can use another module as a dependency
+
+  Each module can be independently built, tested and debugged
+
+  Additional modules useful when creating code libraries within own project
+    (or different code for different devices)
+
+    Keep all files within scope of same project
+
+  Android App Modules
+    Phone & Tablet Module
+    Android Wear Module
+    Android TV Module
+    Glass Module
+
+  Library Modules
+    Android Library
+      This contains all file types supported in an android project
+    Java Library
+      can only contain Java Source Files
+
+  Google Cloud Modules
+    Provides container for Google Cloud backend code
+      Module adds required code for:
+        Java App Engine backend (simple HTTP, cloud endpoints)
+        Cloud Messaging to connect your app
+    You can develop own backend to suit own needs

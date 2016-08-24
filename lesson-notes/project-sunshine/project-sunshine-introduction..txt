@@ -1,0 +1,16 @@
+Project Sunshine
+  Weather app
+    Current day forecast (top of window)
+    Other days forecasts, shown in the bottom section of the screen
+      Scroll through the pane to see other day forecasts
+      Click on forecast to maximise day and show more details
+        Share weather between friends
+        Settings to change location and unit of measure
+    System notifications
+      so don't need to have the app opened
+
+This project will introduce many features that will be incorporated into the app
+  Main goal of the app is to help start to think link a mobile developer
+  End of this course is to build OWN project
+
+Code and videos

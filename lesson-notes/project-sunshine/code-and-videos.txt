@@ -1,0 +1,19 @@
+Code and Videos
+  Since Android is evolving, better to understand concepts than API's
+
+Directory Structure of Android Studio
+  more information found here:
+    https://developer.android.com/studio/projects/index.html
+
+GitHub Codebase
+  All of sunshine code:
+    https://github.com/udacity/Sunshine-Version-2
+  Changelog of project sunshine
+    https://docs.google.com/document/d/193xJb_OpcNCqgquMhxPrMh05IEYFXQqt0S6-6YK8gBw/pub
+
+  Code divided into git branches for each lesson
+    try the coding exercises yourself before looking through the github branch.
+    if stuck, look through the changes of the previous lesson branch with current lesson
+
+Videos
+  The phone and tablet emulators are from 4.4.4 KitKat or 5.0 Lollipop phones
