@@ -23,19 +23,19 @@ Modules
 
     Keep all files within scope of same project
 
-  Android App Modules
+  >Android App Modules
     Phone & Tablet Module
     Android Wear Module
     Android TV Module
     Glass Module
 
-  Library Modules
+  >Library Modules
     Android Library
       This contains all file types supported in an android project
     Java Library
       can only contain Java Source Files
 
-  Google Cloud Modules
+  >Google Cloud Modules
     Provides container for Google Cloud backend code
       Module adds required code for:
         Java App Engine backend (simple HTTP, cloud endpoints)

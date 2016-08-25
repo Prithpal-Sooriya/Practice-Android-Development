@@ -1,0 +1,21 @@
+Starter code
+
+Download/clone the Project Sunshine code from github:
+  https://github.com/udacity/Sunshine-Version-2
+
+Select the branch folder for the tutorial to follow
+  first tutorial:
+    using git command:
+      git checkout 1.01_hello_world
+    using github for desktop
+      change branch at the top left hand corner
+
+  once a branch is selected the whole directory will become that branch
+
+Import the code into Android Studio
+  1) click "open an existing Android Studio project"
+  2) select the folder
+  3) all the code should be opened up, including app and gradle folders
+
+When following the tutorials
+  follow instructions for running app on emulator and phone

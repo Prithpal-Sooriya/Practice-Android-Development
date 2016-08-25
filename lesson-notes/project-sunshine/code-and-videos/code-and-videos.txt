@@ -14,3 +14,8 @@ GitHub Codebase
   Code divided into git branches for each lesson
     try the coding exercises yourself before looking through the github branch.
     if stuck, look through the changes of the previous lesson branch with current lesson
+    
+    Videos
+      The phone and tablet emulators are from 4.4.4 KitKat or 5.0 Lollipop phones
+
+    Download/clone the sunshine version of the code from github
