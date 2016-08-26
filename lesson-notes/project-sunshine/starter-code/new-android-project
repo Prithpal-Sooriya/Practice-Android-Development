@@ -1,0 +1,8 @@
+Create new android progect
+
+Create a new Android project called Sunshine
+  This is where we can do our code
+
+Ensure that the package name is follows
+  com.example.android.sunshine.app
+with the App part since this follows older android studio
