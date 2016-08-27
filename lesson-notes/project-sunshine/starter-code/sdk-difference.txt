@@ -1,0 +1,19 @@
+Minimum and Target SDK
+
+Min SDK:
+  Acts as low past filter
+  Publishing app will make android devices unable to download if the not > min SDK
+    Good thing so that support to older version can cause problems due to features/hardware and older API'
+
+Target SDK:
+  Declares which android version you have tested on
+  App Targeted will be FORWARD compatible to newer SDK's
+    Ensures that app will still function with new devices
+
+How to Select a Min SDK
+  Select a version which most of your users will use
+  Ensure that the min SDK will have the hardware you want to implement
+
+How to Select a Target SDK
+  Select the most latest SDK released so to ensure that the app works well
+  If a new SDK is released, change the target SDK to the new SDK and test the new SDK

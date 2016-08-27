@@ -1,0 +1,17 @@
+Min SDK will be Gingerbread
+  As this follows the Udacity Course
+  Also now covers approximately 100% of devices
+
+Choosing a template: Blank Activity with fragments
+  New versions do not contain this anymore, so will need to select:
+    Empty Activity
+    Add own fragment in (infromation to create fragments found here)
+      https://developer.android.com/training/basics/fragments/creating.html
+      https://developer.android.com/guide/components/fragments.html
+
+Once app is created, go into app folder--> build.gradle file
+  ensure that the target SDK is the latest release
+
+Next select a new image for the app
+  right click onto app folder and select:
+    "new image asset"
