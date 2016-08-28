@@ -1,0 +1,10 @@
+Running code
+
+You can run code from a physical device
+  make sure that developer tools in on the device
+  and make sure that the device is located
+
+You can run code from an emulator
+  create a emulator device with the purple icon at the top of android studio
+    this is the AVD (android device manager)
+  you can select a plethora of different devices and SDK's to test app from

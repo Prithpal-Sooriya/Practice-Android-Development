@@ -1,0 +1,27 @@
+Android Software Stack
+
+Android is full software stack
+  Adspace is a Linux Kernel
+    low level tasks
+
+  Then there are Core Libraries
+    core C, C++, SQLite,
+    Android Runtime (android virtual machine)
+
+  Then Application framework
+    own code and libraries/api's will run here
+
+  Lastly is Application Layer
+    where all application are located and ran (where the user can interact)
+
+What happens to code
+  Converted into bytecode (that can be run on android virtual machine)
+  Then this is installed onto the device
+
+  In android studio, the process above (HLL --> bytecode --> android virtual machine)
+    happens with gradle (a build toolkit, that does everything!)
+      Will build Android project
+      convert code into bytecode, resources, manifest (whole this here is called APK)
+
+      Jar Signer will sign the code
+      ADB (android debug bridge) will install onto device

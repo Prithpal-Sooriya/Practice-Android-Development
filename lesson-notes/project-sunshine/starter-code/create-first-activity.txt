@@ -8,6 +8,40 @@ Choosing a template: Blank Activity with fragments
     Add own fragment in (infromation to create fragments found here)
       https://developer.android.com/training/basics/fragments/creating.html
       https://developer.android.com/guide/components/fragments.html
+    The code for the new fragment needs to be placed into Java and XML
+      The java code can be placed into a separate class or an inner class
+      <java>
+        public class MainFragment extends Fragment {
+          @override
+          public View onCreateView(LayoutInflater inflater, ViewGroup container
+            Bundle savedInstanceState) {
+              //inflate the layout for this fragment
+              View rootView = infater.inflate(R.layout.[xml fragment], container, false);
+              return rootView;
+            }
+        }
+      </java>
+
+      XML code to insert (XML will be in a separate file)
+      <XML>
+        <fragment
+          android:name="com.example.android.fragments.[java class location of fragment]"
+          android:id="@+id/[name of fragment]"
+          -- extras
+          android:layout_weight="1"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+        />
+      </XML>
+
+      The [java class location] above can be
+        normal class:
+          <class name>
+        inner class:
+          <inner class name>$<inner class name>
+
+The java version of the fragment can be combined with java activity
+  Called FragmentActivity (so <class> extends FragmentActivity)
 
 Once app is created, go into app folder--> build.gradle file
   ensure that the target SDK is the latest release
