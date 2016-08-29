@@ -1,0 +1,6 @@
+Add Fake data
+
+To create fake data
+  add the fake data into the PlaceholderFragement inner class of MainActivity
+
+  place the fake data into the onCreate method of the PlaceHolderFragment class

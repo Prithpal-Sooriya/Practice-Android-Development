@@ -1,0 +1,8 @@
+Create list item layout
+
+Create a new file inside res --> layout folder
+  Call this file "list_item_forecast.xml"
+
+The file will contain a TextView
+  Id of TextView "@+id/list_item_forecast_textview"
+  

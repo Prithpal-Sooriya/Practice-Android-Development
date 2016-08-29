@@ -1,0 +1,39 @@
+Create the user interface
+
+MaiaActivity class
+  code which is initially ran when app is opened
+
+PlaceholderFragment inner class
+  extends Fragment
+    Is a template generated when we created project
+    Fragment = modular container within activity
+
+  Inside this class is the onCreateView
+    which executes code to inflate an inflator with UI layout resource
+      R.layout.fragment_main
+        Can be navigated into: res folder --> layout folder --> [layout in here]
+
+
+fragment_main.xml
+  This fragment holds the UI elements
+  contains a TextView with string "hello world!"
+
+  EditText = user input text into device
+    Many different EditTexts
+      name
+      email
+      password
+      phone
+      ...
+    Many options (e.g. support for single or multiline)
+
+  Image view
+    displays an image defined by its source attribute
+    useful features
+      Zooming
+      Cropping
+      Aspect ratio
+
+  List view
+    special view which contains one or more views
+      views inside can be replicated to display sets of data

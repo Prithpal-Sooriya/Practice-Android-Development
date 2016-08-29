@@ -1,0 +1,47 @@
+Update Fragement layout
+
+Layouts are used to hold GUI elements in
+
+However issues can occur to GUI when:
+  flipping the screen
+  different size devices
+
+Responsive design
+  Absolute Layout used to be a thing
+    pixel by pixel GUI
+  However deprecated since it doesn't work with other screen sized and resolutions
+
+  Important to build layouts to be reasonably flexible with different size devices
+    One route is to design GUI for some common device sizes
+      Think about sizes for:
+        small phone
+        large phone
+        medium tablet
+        large tablet
+
+Different layouts/ Layout Managers
+  3 common layouts to build UI:
+    Frame Layout
+      Great for simple layouts when only have one child to view
+        e.g. listView
+
+    Linear Layout
+      Perfect for stacking views horizontally or vertically, one after another
+        Allows the items inside to break display proportionately
+
+    Relative Layout
+      Complicated, but powerful
+        Configure each view to layout or sibling views
+
+Scroll view vs List View
+  Both do the same thing
+  ScrollView can be slower
+    as needs to load each item when comes onto screen
+  ListView faster
+    as has a buffer above and below list, so can preload items before shown on screen
+    also removes/recycles old views when too far off screen
+      recycles top buffer and bottom buffer if scrolling down or up
+
+Recycling items in view are for each child of AdapterView
+  ListView
+  GridView

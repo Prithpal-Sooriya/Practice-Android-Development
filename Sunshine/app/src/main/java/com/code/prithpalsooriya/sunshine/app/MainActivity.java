@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     //creation of activity
@@ -68,6 +70,19 @@ public class MainActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+
+            //adding some fake data :)
+            //arraylist of strings for the weather
+            ArrayList<String> fakeData = new ArrayList<>();
+
+            fakeData.add("Today - Sunny - 88/63");
+            fakeData.add("Tomorrow - Foggy - 70/46");
+            fakeData.add("Weds - Cloudy - 37/63");
+            fakeData.add("Thurs - Rainy - 64/51");
+            fakeData.add("Fri - Foggy - 70/46");
+            fakeData.add("Sat - Sunny - 76/68");
+
+
             return rootView;
         }
     }

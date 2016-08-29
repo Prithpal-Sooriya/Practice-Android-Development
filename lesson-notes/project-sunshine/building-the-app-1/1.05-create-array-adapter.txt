@@ -1,0 +1,17 @@
+Create an array adapter
+
+Array adapter = will be used to populate the ListView of fake data
+
+How the adapter works
+  1) Create/ have raw data (array/list of objects)
+
+  2) Initialise the adapter
+    Pass the data to it as a reference
+    The Adapter knows how to populate list item data for different data items
+
+  3) Don't need to create view to the items of data
+    Only need to do this when the ListView requests that it needs them
+
+  3) When ListView requests, it asks how many data in dataset
+    The adapter returns the number of items
+    ListView will start at position 0
