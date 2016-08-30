@@ -1,0 +1,25 @@
+Attach Adapter
+
+Once Adapter is initialised, need to attach it to the listview
+  need to get the listview
+
+Finding Views
+  When XML views are compiled, they create a view hierarchy
+    Root layout at the top of the tree
+
+  Can assign ID's to each view in the tree (imageView, textView, layouts, buttons, ...)
+    however ID not required if you don't need reference to view
+
+  When calling java code: findViewById(R.id.button)
+    will go through each element in tree (breadth search)
+      will find element
+      will throw error
+
+    You can also call findViewById(...), of a child of a parent already created
+      e.g.
+      //parent found
+      LinearLayout container = (LinearLayout) this.findViewById(R.id.container);
+
+      //find textview in subtree of parent
+      //will speed up searching for item
+      TextView t = (TextView) container.findViewById(R.id.txt);

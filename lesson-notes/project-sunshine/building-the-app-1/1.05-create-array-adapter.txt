@@ -8,6 +8,7 @@ How the adapter works
   2) Initialise the adapter
     Pass the data to it as a reference
     The Adapter knows how to populate list item data for different data items
+      Knows by the XML layout you pass to it (to know how to order list)
 
   3) Don't need to create view to the items of data
     Only need to do this when the ListView requests that it needs them
@@ -15,3 +16,25 @@ How the adapter works
   3) When ListView requests, it asks how many data in dataset
     The adapter returns the number of items
     ListView will start at position 0
+
+Code for the array adapter
+  initialise adapter:
+    create ArrayAdapter<String> in PlaceholderFragment.java onCreateView
+
+  parameters:
+    Context
+      --> global info about app environment
+      --> access system services and resources (+ app resources)
+      --> getActivty(), used due to fragment activity
+
+    ID of list item layout
+      --> needs reference to XML layout we have defined
+      --> R.Layout.list_item_forecast (R.layout = layout)
+
+    ID of TextView
+      --> need reference to TextView in the XML layout
+      --> R.id.list_item_forecast_textview (R.id = id on an item)
+
+    list of data
+      --> this is the arraylist of data:
+      --> Arraylist called: weekForecast

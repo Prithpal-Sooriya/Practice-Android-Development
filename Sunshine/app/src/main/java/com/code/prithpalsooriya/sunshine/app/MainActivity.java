@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -82,6 +84,23 @@ public class MainActivity extends AppCompatActivity {
             fakeData.add("Fri - Foggy - 70/46");
             fakeData.add("Sat - Sunny - 76/68");
 
+            //params for array adapter
+            //param1 =  context = getActivity()
+            //param2 = id of layout
+            //param3 = id of item in layout to populate
+            //param4 = List of data (ArrayList, Array, Set, ...)
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                    getActivity(),
+                    R.layout.list_item_forecast,
+                    R.id.list_item_forecast_textview,
+                    fakeData
+            );
+
+            /*bind the adapter*/
+            //get the listview
+            ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
+            //set arrayAdapter on listview
+            listView.setAdapter(arrayAdapter);
 
             return rootView;
         }
