@@ -1,0 +1,17 @@
+Add Network Code
+
+Plan: Connect app over the network to the OpenWeatherMapService
+
+NOTE: open weather map requires you to have an API key
+http://openweathermap.org/appid
+
+OpenWeatherMap
+  Free weather data and forecast API
+  Website: http://openweathermap.org/API
+  Contains great documentation
+    User friendly description of the weather
+
+Web queries
+  With OpenWeatherMap, you can see the different queries that you can make
+  Contains example queries that you can look through
+    Get a understanding of the queries and API

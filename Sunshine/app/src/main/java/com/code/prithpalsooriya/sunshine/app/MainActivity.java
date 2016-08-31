@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity {
 
             //params for array adapter
             //param1 =  context = getActivity()
-            //param2 = id of layout
+            //param2 = name of layout
             //param3 = id of item in layout to populate
             //param4 = List of data (ArrayList, Array, Set, ...)
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                     getActivity(),
                     R.layout.list_item_forecast,
                     R.id.list_item_forecast_textview,

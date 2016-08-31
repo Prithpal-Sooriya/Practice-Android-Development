@@ -1,0 +1,96 @@
+Review
+
+Android Studio
+  An IDE for Android development
+  Can do some neat stuff
+
+SDK - Min and Target
+  Minimum SDK = the limit on oldest devices to run your app
+  Target SDK = SDK you used for testing (should be the latest SDK)
+
+Emulators vs Real devices
+  You can test on both
+  Emulated = slower, but can change parameters (like location) for testing
+  Real = faster, fluid, smother, real test environment for app
+
+Gradle
+  Build program that builds the app
+  Scripts like build.gradle, settings.gradle can run script when project is being built
+
+Application
+  2 main parts:
+    front end = GUI, what user will see
+    back end = everything in the background
+
+  learn more about some concepts in other lessons:
+    Content Providers (Lesson 4)
+      Manage app data
+    Services (Lesson 6)
+      Run background tasks with no UI (e.g. downloading info, playing music)
+    Broadcast Receivers (Lesson 6)
+      Listen for and respond to system announcements (e.g. screen being turned on, losing network connectivity)
+
+Activity
+  Activities are components of Android apps that the user interacts with
+  Is the core class in Android
+    e.g. MainActivity, first activity created when app is launched (done through the AndroidManifest.xml)
+  Is a single, focused thing that:
+    the user can do
+    roughly maps to one screen of the app
+
+Fragment
+  Fragment = Modular sections of an activity
+  Activities can contain one or more fragments
+  2 Activities can have the same fragment
+  Fragments can be added or removed from an activity
+  Fragments created can be own class or an inner class
+
+Views and ViewGroups
+  View = basic building block for UI components
+    Fragment might combine multiple views in its layout
+    Button, Text, other widgets are subclasses of Views
+
+  ViewGroups = collection of views to create larger layouts
+    Main ViewGroups (known as layouts):
+      LinearLayout = horizontal/vertical collection of elements
+      RelativeLayout = for laying out elements relative to one another
+      FrameLayout = for containing a single view
+
+Views and XML layouts
+  Used to describe UI. Describe layouts using XML
+  Layout defines collection of Views, ViewGroups and the relationship between them
+    Layouts stored in Layout Directory (app/src/main/res/layout directory)
+
+  To turn XML layout into Java View objects, need to INFLATE the layout
+    After inflated, need to associate with an Activity or Fragment
+
+    Code for Activity = done inside onCreate() method of Activity
+      setContentView(R.layout.activity_main);
+
+    Code for Fragment = done inside the onCreateView(...) method, and uses the LayoutInflater parameter passed
+      View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+      //saved to rootView so we can use rootView if we need to get an ID of an element inside rootView
+
+ListView
+  Subclass of View
+  Optimised for displaying lists
+    Done by displaying many copies of a single layout
+
+  We use listview in sunshine app to display weather information
+    Each row on this listview is defined by a layout
+      We created this layout and called it list_item_forecast.xml (which has root view as a textview)
+      The textview for the xml has id: list_item_forecast_textview
+    The listview contains multiple copies of list_item_forcast.xml
+      one for each row of weather data
+
+  An adapter is used to populate the listview
+
+Adapter
+  Adapters = translate data source into views for a listview to display
+
+  In our case we used an ArrayAdapter
+    Takes in array of Strings and populate the strings into:
+      Context = the activity
+      layout = layout to which the data source is mapped to UI (list_item_forecast.xml)
+      item = id of item/view inside the layout supplied to populate the data source
+      list of data = the array of data to map to each of its own layout in the ListView
