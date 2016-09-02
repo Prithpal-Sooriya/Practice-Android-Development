@@ -1,0 +1,64 @@
+Current Weather Data
+
+Call current data for one location:
+<by city name>
+  API calls:
+    api.openweathermap.org/data/2.5/weather?q={city name}
+    api.openweathermap.org/data/2.5/weather?q={city name},{country code}
+      where q city name and country code divided by comma
+        Use ISO 3166 country codes
+
+    Example API calls:
+      api.openweathermap.org/data/2.5/weather?q=London
+      api.openweathermap.org/data/2.5/weather?q=London,uk
+
+<by city id, most preferable>
+  Call city id gives exact result
+  City ID's can be found here:
+    http://bulk.openweathermap.org/sample/
+  param: id= City ID
+
+  Example API call:
+    api.openweathermap.org/data/2.5/weather?id=2172797
+
+<by geographic coordinates>
+  API call:
+    api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}
+  Parameters:
+    {lat}, {lon} = coordinates of location of interest
+
+  Example API call:
+    api.openweathermap.org/data/2.5/weather?lat=35&lon=139
+  API Response:
+    {"coord":{"lon":139,"lat":35},
+    "sys":{"country":"JP","sunrise":1369769524,"sunset":1369821049},
+    "weather":[{"id":804,"main":"clouds","description":"overcast clouds","icon":"04n"}],
+    "main":{"temp":289.5,"humidity":89,"pressure":1013,"temp_min":287.04,"temp_max":292.04},
+    "wind":{"speed":7.31,"deg":187.002},``
+    "rain":{"3h":0},
+    "clouds":{"all":92},
+    "dt":1369824698,
+    "id":1851632,
+    "name":"Shuzenji",
+    "cod":200}
+
+<by zip code>
+  API call:
+    api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}
+  Parameters:
+    zip code and country code
+
+  Example API call:
+      api.openweathermap.org/data/2.5/weather?zip=94040,us
+  API Response:
+    {"coord":{"lon":-122.09,"lat":37.39},
+    "sys":{"type":3,"id":168940,"message":0.0297,"country":"US","sunrise":1427723751,"sunset":1427768967},
+    "weather":[{"id":800,"main":"Clear","description":"Sky is Clear","icon":"01n"}],
+    "base":"stations",
+    "main":{"temp":285.68,"humidity":74,"pressure":1016.8,"temp_min":284.82,"temp_max":286.48},
+    "wind":{"speed":0.96,"deg":285.001},
+    "clouds":{"all":0},
+    "dt":1427700245,
+    "id":0,
+    "name":"Mountain View",
+    "cod":200}

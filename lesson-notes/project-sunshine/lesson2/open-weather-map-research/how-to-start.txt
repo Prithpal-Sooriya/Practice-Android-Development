@@ -1,0 +1,22 @@
+How to start
+  Get an API key
+    Done by creating an account and will be given a free key
+  How to use the API key
+    API call:
+      http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID={APIKEY}
+        where {APIKEY} is the number for your key
+    Example call
+      api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=1111111111
+  How to get accurate API response:
+    Do not send more than 1 time per 10 min from 1 device/API key
+      Weather does not change so frequently
+
+    Use name of server as api.openweathermap.org
+      Never use the IP address of the server
+
+    Call API by city ID instead of city name, coordinates or zip code
+      precise response for city
+      
+    Free account has limitation of capacity and data availability
+      If you do not get a response, DO NOT repeat request immediately only after 10 min
+      Also recommend to store previous request data

@@ -1,1 +1,4 @@
 Research
+
+Research done from API link:
+  http://openweathermap.org/api

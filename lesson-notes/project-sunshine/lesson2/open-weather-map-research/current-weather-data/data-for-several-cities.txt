@@ -1,0 +1,16 @@
+Call current data from several cities
+
+<cities within rectangle zone>
+  Description:
+    JSON returns data from cities within defined rectangle specified by the
+    geographic coordinates
+  Parameters
+    bbox = bounding box [lon-left,lat-bottom,lon-right-lat-top]
+    callback = javascript functionName
+    cluster = user server clustering of points (yes/no for values)
+    lang = language [ru, en, ...]
+
+  Examples of API calls:
+  http://api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&cluster=yes
+
+  <cities in cycle>
