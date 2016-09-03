@@ -1,0 +1,9 @@
+Bulk downloading
+
+  Description:
+    provides number of bulk files with current weather data and forecasts
+    more information:
+      http://openweathermap.org/bulk
+
+  Examples of bulk files:
+    http://bulk.openweathermap.org/sample/

@@ -4,7 +4,7 @@ Call current data from several cities
   Description:
     JSON returns data from cities within defined rectangle specified by the
     geographic coordinates
-  Parameters
+  Parameters:
     bbox = bounding box [lon-left,lat-bottom,lon-right-lat-top]
     callback = javascript functionName
     cluster = user server clustering of points (yes/no for values)
@@ -14,3 +14,23 @@ Call current data from several cities
   http://api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&cluster=yes
 
   <cities in cycle>
+    Description:
+      JSON returns data from cities within defined rectangle
+      specified by geographic coordinates
+    Parameters:
+      lat = latitude
+      lon = longitude
+      callback = function name for JSONP callback
+      cluster = use server clustering points (yes/no for values)
+      lang = language [ru, en, ...]
+      cnt = number of cities around point that should be returned
+
+    Examples of API calls:
+      http://api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=10
+
+  <calls for several city ID's>
+    Parameters:
+      id = city ID
+
+    Examples of API calls:
+      http://api.openweathermap.org/data/2.5/group?id=524901,703448,2643743&units=metric

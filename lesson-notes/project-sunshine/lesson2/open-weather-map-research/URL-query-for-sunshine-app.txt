@@ -1,0 +1,11 @@
+URL Query For Sunshine App
+  requirements:
+    -1 week forecast
+    -JSON format
+    -postal code 94043 (Udacity postal code given)
+      can use other postal codes, Geographic location (lat, lon)
+      , city name
+      , city id
+
+  Bristol JSON
+  {"_id":2654675,"name":"Bristol","country":"GB","coord":{"lon":-2.59665,"lat":51.455231}}
