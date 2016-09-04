@@ -9,3 +9,106 @@ URL Query For Sunshine App
 
   Bristol JSON
   {"_id":2654675,"name":"Bristol","country":"GB","coord":{"lon":-2.59665,"lat":51.455231}}
+
+  Answer:
+    api.openweathermap.org/data/2.5/forecast/daily?q=Bristol,GB&mode=json&units=metric&cnt=7&APPID=...
+    parameters:
+      /daily = get daily average weather
+      q = <city name>, <country code following ISO 3166>
+      mode = <mode to display data> (options XML, JSON, HTML)
+      units = <unit of measurement> (metric or imperial)
+      cnt = <length of forecast> <e.g. 7 = 7 days>
+      APPID= <key for the app to access this>
+
+    My result:
+      NOTE: all this data is retrieved in one line (there is no line breaks)
+      {
+        "city":
+          {
+            "id":2654675,
+            "name":"Bristol",
+            "coord":{"lon":-2.59665,"lat":51.455231},
+            "country":"GB",
+            "population":0
+          },
+        "cod":"200",
+        "message":0.0111,
+        "cnt":7,
+        "list":
+        [
+          {
+            "dt":1472990400,
+            "temp":{"day":16.98,"min":12.55,"max":16.98,"night":12.55,"eve":15.91,"morn":16.98},
+            "pressure":1018.48,
+            "humidity":82,
+            "weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
+            "speed":5.93,
+            "deg":284,
+            "clouds":56,
+            "rain":0.41
+          },
+          {
+            "dt":1473076800,
+            "temp":{"day":20.63,"min":15.43,"max":21.34,"night":15.84,"eve":20.13,"morn":15.43},
+            "pressure":1022.48,
+            "humidity":92,
+            "weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
+            "speed":4.22,
+            "deg":281,
+            "clouds":68,
+            "rain":1.12
+          },
+          {
+            "dt":1473163200,
+            "temp":{"day":20.24,"min":12.01,"max":21.13,"night":12.01,"eve":19.85,"morn":13.1},
+            "pressure":1027.46,
+            "humidity":90,
+            "weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
+            "speed":3.21,
+            "deg":193,
+            "clouds":24
+          },
+          {
+            "dt":1473249600,
+            "temp":{"day":22.19,"min":11.61,"max":24.12,"night":15.84,"eve":21.65,"morn":11.61},
+            "pressure":1022.03,
+            "humidity":89,
+            "weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],
+            "speed":3.42,
+            "deg":121,
+            "clouds":0
+          },
+          {
+            "dt":1473336000,
+            "temp":{"day":22.07,"min":15.37,"max":22.07,"night":17.39,"eve":18.43,"morn":15.37},
+            "pressure":1010.3,
+            "humidity":80,
+            "weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"02d"}],
+            "speed":5.9,
+            "deg":212,
+            "clouds":8
+          },
+          {
+            "dt":1473422400,
+            "temp":{"day":18.79,"min":13.02,"max":18.79,"night":13.02,"eve":17.61,"morn":17.41},
+            "pressure":1007.75,
+            "humidity":0,
+            "weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],
+            "speed":9.46,
+            "deg":225,
+            "clouds":5,
+            "rain":1.63
+          },
+          {
+            "dt":1473508800,
+            "temp":{"day":18.28,"min":14.13,"max":18.28,"night":16.07,"eve":18.2,"morn":14.13},
+            "pressure":1011.24,
+            "humidity":0,
+            "weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],
+            "speed":7.81,
+            "deg":183,
+            "clouds":85,
+            "rain":6.88
+          }
+        ]
+      }
