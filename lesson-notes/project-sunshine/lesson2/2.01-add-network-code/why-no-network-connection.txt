@@ -1,0 +1,7 @@
+THERE IS AN ERROR IN THE CODE (the code crashes)
+  Reason because (after using logs to find error):
+    NetworkOnMainThreadException
+    Error caused due to: urlConnection.connect();
+      Due to not being allowed to have networking code on the main thread as it may take too long
+      So instead create a thread for the networking code (connecting to the api)
+        This follows onto 2.02-refactor-forecast-fragment

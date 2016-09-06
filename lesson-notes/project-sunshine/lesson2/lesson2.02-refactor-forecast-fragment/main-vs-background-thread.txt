@@ -1,0 +1,17 @@
+Main thread vs Background thread
+  Main thread:
+    Android apps run default on the main thread
+    Main thread also called UI thread
+      Handles all user input and output (e.g. screen drawing)
+    Ensure to avoid any time-consuming operations
+      otherwise screen will stutter
+      place time-consuming operations onto a background worker thread
+        great for any long running work (which could also be blocking code)
+
+  Background thread
+    Also called (is a embodies) background worker thread
+    Great for long running operations/blocking code
+    Examples of long running work:
+      network calls
+      decoding bitmaps
+      reading/writing from a database

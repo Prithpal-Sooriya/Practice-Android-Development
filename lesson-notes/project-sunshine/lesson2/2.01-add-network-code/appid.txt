@@ -1,0 +1,4 @@
+Plan: Connect app over the network to the OpenWeatherMapService
+
+NOTE: open weather map requires you to have an API key
+http://openweathermap.org/appid

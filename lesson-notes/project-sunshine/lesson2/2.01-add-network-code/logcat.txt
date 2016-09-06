@@ -1,0 +1,28 @@
+Logcat
+  This is a debugging tool (similar to output onto command line)
+    Displays text you place from:
+      Log.e("PlaceholderFragment", "Error closing stream", e);
+    They log error messages
+
+  With ADB command line tool (and device plugged in)
+    type in the app directory: adb logcat
+      Will show all debug and error messages printed into logcat
+  Also can see logs using Android Studio
+    Click on green Android button ("Android Device Monitor")
+    Then click on logcat tab to see log messages
+
+Determining log level
+  When using log to print errors, need to determine what log level it should be displayed at:
+  Log levels and their java code:
+    Error - kept during runtime, Log.e(String tag, String message)
+    Warn - kept during runtime, log.w(String tag, String message)
+    Info - kept during runtime, Log.i(String tag, String message)
+    Debug - Compiled in, but stripped during runtime, Log.d(String tag, String message)
+    Verbose - should never be compiled into app, except for development Log.v(String tag, String message)
+
+  Parameters for log (String tag, String message)
+    String tag = log tag, any String you want to identify log message
+      Good practice to define log tag as a CONSTANT in your class (name of class or App)
+    String message = actual log message you want to display
+
+    PRO TIP: avoid log spam!!!

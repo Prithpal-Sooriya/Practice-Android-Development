@@ -1,0 +1,25 @@
+AsyncTask
+  This allows you to only focus on:
+    the app logic
+    processes on the background thread
+    process of bringing the data from background thread to the main thread
+  Do not need to worry about the details about threads and handlers
+
+  doInBackground() HAS to be implemented
+    so it can process the parameter/s passed through
+    Can also call publishProgress() as many times as you want
+      So you can pass information to the UI thread (so the UI can update to know how much % of work is done!)
+      It triggers onProgressUpdate() (that is called in the UI thread) with some information
+  onPostExecute() = return the producing data/returning data back to main thread
+  onPreExecute() = return item before execution to the main thread
+    Executed before doInBackground() method, so can do any setup work
+  onProgressUpdate() = return progress data of how far the data is to being complete/what stage data is at being done
+    These are optional
+
+  Methods to be called in background thread
+    doInBackground()
+
+  Methods to be called in UI/main thread
+    onPreExecute()
+    onProgressUpdate()
+    onPostExecute()

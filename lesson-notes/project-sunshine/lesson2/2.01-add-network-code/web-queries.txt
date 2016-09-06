@@ -1,0 +1,4 @@
+Web queries
+  With OpenWeatherMap, you can see the different queries that you can make
+  Contains example queries that you can look through
+    Get a understanding of the queries and API

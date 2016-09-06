@@ -1,0 +1,91 @@
+Android threads:
+  In java you have to create a Runnable and run it in a thread pool
+    Or use Executer service, or RecursiveTask/RecursiveAction classes
+
+  Some Android classes can simplify:
+    background thread creation
+    UI thread synchronisation
+      Synchronisation so work completed on a background thread can return to the main thread to be used
+    Use Asynctask.execute(new Runnable() {...});
+      Execute code on a background thread
+      Execute code that DOES NOT touch/update UI
+        But can be used to communicate to UI thread and can return values
+        Can also use binder or messenger to communicate with Activity/UI thread
+      Execute (short) code which will take few seconds to complete
+
+  Without AsyncTask:
+    public void onClick(View v) {
+      //first runnable to run thread
+      new Thread(new Runnable() {
+        public void run() {
+          final Bitmap bitmap =
+            loadImageFromNetwork("http://example.com/image.png");
+          //another runnable to allow outer thread to communicate with UI thread
+          mImageView.post(new Runnable() {
+            public void run() {
+              mImageView.setImageBitmap(bitmap);
+            }
+          });
+        }
+      }).start();
+    }
+
+  With AsyncTask:
+    public void onClick(View v) {
+      new DownloadImageTask().execute("http://example.com/image.png");
+    }
+
+    //inner class extends AsyncTask
+    private class DownloadImageTask extends
+      /*
+      parameters/generics need to specify for AysncTask:
+        String/1st generic = datatype (from parameters in UI thread) that will be placed
+          in the doInBackground() method
+        Void/2nd generic = type of object you'll get from progress updates as task is being executed.
+          not using this parameter, so Okay to set as Void
+        Bitmap/3rd generic = type of result/s that will be sent back to UI thread.
+          Return is done through the onPostExecute() method
+      */
+      AsyncTask<String, Void, Bitmap> {
+
+      //the task/process to execute
+      protected Bitmap doInBackground(String... urls) {
+        return loadImageFromNetwork(urls[0]);
+      }
+
+      //the method to communicate with UI thread
+      protected void onPostExecute(Bitmap result) {
+        mImageView.setImageBitmap(result)
+      }
+    }
+
+
+Research:
+  https://developer.android.com/guide/components/processes-and-threads.html#Threads
+  Notes:
+    1) Do not block UI thread
+    2) Do not access Android UI toolkit outside the UI thread
+      If you need to access UI thread in a background thread:
+        Activity.runOnUiThread(Runnable) //where Activity can be a class given
+        View.post(Runnable) //where View can be a view (e.g. imageView) given
+        View.postDelayed(Runnable, long) //where View can be a view (e.g. imageView) given
+
+    AsyncTask
+      Allows to perform asynchronous work on UI
+        Performs Blocking operations on worker thread then returns results to UI thread
+      Use subclass AsyncTask and implement doInBackground() callback method
+        UI thread should implement onPostExecute(), which retrieves results from doInBackground()
+        Execute by calling execute() on UI thread
+      E.g. use when downloading image
+
+    Thread safe methods
+      if method being used by more than one thread, needs to be thread safe
+      You can:
+        synchronise threads (from Java.Thread class), add a bind(),
+        blockingThreads, locks/RestraintLock, signals, unlocks
+
+  https://developer.android.com/guide/components/processes-and-threads.html
+  Notes:
+    Process:
+      Android manifests support processes
+        Set in here if Activities, Services, Receivers, Providers can share processes

@@ -1,0 +1,31 @@
+HTTP request for weather
+  1) make HTTP request
+    pass the URL that we have created in the research:
+      api.openweathermap.org/data/2.5/forecast/daily?q=Bristol,GB&mode=json&units=metric&cnt=7&APPID=...
+
+  2) read the response from an input stream
+    The response is in JSON format (so will get a JSON string)
+      so we read this and get the data we need
+
+  3) clean up and log errors
+    disconnecting connection
+    closing any input streams
+    log errors if they occur/are caught
+
+Http Requests
+  To send/receive data over a connection, there are 2 clients on android:
+    HttpURLConnection (newer-ish)
+      USE THIS: it is general purpose, lightweight, optimised for most android apps
+    HttpClient (Apache class, older and will support Android Froyo and below)
+
+  Both support:
+    HTTPS, streaming uploads and downloads, configurable time outs
+    IPV-6, and connection pooling
+
+  For more information:
+    training guide:
+      https://developer.android.com/training/basics/network-ops/connecting.html
+    blog post:
+      http://android-developers.blogspot.co.uk/2011/09/androids-http-clients.html
+  NOTE: both are oldish, have a look at Voley API for android:
+    https://www.youtube.com/watch?v=yhv8l9F44qo

@@ -1,0 +1,5 @@
+OpenWeatherMap
+  Free weather data and forecast API
+  Website: http://openweathermap.org/API
+  Contains great documentation
+    User friendly description of the weather
