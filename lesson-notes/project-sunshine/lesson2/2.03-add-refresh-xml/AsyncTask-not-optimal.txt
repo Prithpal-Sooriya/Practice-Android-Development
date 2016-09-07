@@ -1,0 +1,37 @@
+Why AsyncTask is not optimal
+  A good app will refresh and save before you even need to think about it
+    Refresh and save button should only exist in debugging
+  The ability to run background tasks and send messages to a server
+    = no reason to make user force any process
+  The app should have up to date data and synced to the cloud
+
+  Why background tasks/ AsyncTask may have an issue
+    The transfer (of data to/from main thread and background helper threads)
+      whose lifetime is tied to a UI component
+
+    For example
+      Activity contains the main thread
+      the main thread runs a background thread
+
+      IF activity is destroyed (by screen rotation)
+        The transfer of data between the main thread and background thread are terminated
+
+  Therefore AsyncTasks should be tied to host activity
+    And expected to only run a second or 2
+
+  Network access on a AsyncTask, pshhhh...
+    This is a bad idea, since networking may take much longer that 1/2 seconds
+    Better approach = use a Service
+
+  Service
+    = an application component without UI
+    Therefore less likely to be interrupted
+
+    Also Services can be scheduled using Inexact Repeating Alarm = OK for scheduling
+
+    Android also has AsyncAdapter = Better for scheduling
+      Designed especially to schedule background data syncs as efficiently as possible
+
+    Google Cloud Messaging = Even Better for scheduling
+      Lets you notify AsyncAdapter of changes on the server side
+        So only initiating network request from app when you KNOW something has changed

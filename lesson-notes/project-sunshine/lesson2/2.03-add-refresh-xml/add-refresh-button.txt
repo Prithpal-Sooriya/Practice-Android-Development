@@ -1,0 +1,11 @@
+Add refresh button into app
+
+  Right now...
+    We have been using fake data to simulate the weather data
+
+  What we need to get done
+    Need to add code that creates a background thread (from the main thread)
+    For debugging purposes, it would be great if we could execute task any time we wanted
+      So add refresh menu option for debugging
+      NOTE: this should not be shipped with final app
+        due to the amount of calls allows is once every 10 min
