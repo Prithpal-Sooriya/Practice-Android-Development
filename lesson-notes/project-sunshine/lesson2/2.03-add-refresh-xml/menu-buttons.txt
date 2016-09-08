@@ -1,0 +1,27 @@
+Menu Buttons
+
+  Lets add a refresh button to the app
+    For temporary purposes only though (as keeping it is bad design for this app)
+
+  Menu options
+    What is a menu?
+      For example: the 3 dots on the top right hand corner of the device
+      The section where you can open up settings and other commands
+
+    These are defined in XML
+    Can be declared for fragments or activities
+
+    When fragment/activity is created
+      Inflates menu XML into actual menu items
+        They can contains action buttons
+          Action buttons = menu items that appear in the action bar
+            E.g. Search menu item
+        Other action buttons that are less important
+          They will go into overflow menu (where the 3 dots are located)
+            These items are ordered from:
+              Most Frequently used (at the top of the list)
+              Least Frequently used (at bottom of the list)
+            Larger screens will allow some items in the overflow menu to be placed onto the action bar
+
+  Additional research:
+    https://developer.android.com/guide/topics/ui/menus.html
