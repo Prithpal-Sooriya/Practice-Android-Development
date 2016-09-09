@@ -1,0 +1,89 @@
+Additional research:
+  https://developer.android.com/guide/topics/ui/menus.html
+
+Menus
+
+  Option menu and action bars:
+    This is what we just covered
+      Action bar contains items
+      Action bar also contains an overflow menu
+        which contains other items that don't fit onto the screen
+
+  Context menu and contextual actions mode
+    Context menu = floating menu that appears when a user makes a long click on an element
+      basically a right-click to allow other options instead of copy and paste
+    Contextual actions mode = displays action items...
+      ... that affect selected content in a bar at the top of the screen
+      Also allows the user to select multiple items
+
+  Popup menu
+    Displays a list of items in a vertical list
+      List is anchored to the view that invoked the menu
+    It is good for providing an overflow of actions that relate to a specific content
+      Or even to provide options for a second part of a command
+        (e.g. sub list of options inside an element in a list)
+    Actions in popup menu should NOT directly affect the corresponding content (contextual actions are supposed to do this)
+      Instead is used for extended actions that relate to regions of content in activity
+
+Defining a menu in XML
+  All menus need to be placed into a menu folder in the res
+    res --> menus --> yourMenu.xml ...
+
+  Menu resource is good practice for a few reasons:
+    It is easier to visualise menu structure in XML
+    It separates content for the menu from you applications behavioural code
+    It allows you to create alternative menu configurations for different:
+      platform versions
+      screen sizes
+      other configurations by leveraging the App Resources framework
+
+  To define a menu in XML, just state:
+    <menu>
+      This defines a menu, which is a contains for menu items
+      A <Menu> element must be the root node for the file
+      It can hold 1 or more <item> and <group> elements
+    </menu>
+
+    <item>
+      Creates a menu MenuItem, which represents a single item in the menu.
+      This element may contain nested <menu> element in order to create a submenu
+    </item>
+
+    <group>
+      An optional, invisible container for <item> elements
+      Allows you to categorise menu items so they share properties such as:
+        active state
+        visibility
+    </group>
+
+  Example code for game menu:
+  <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/new_game"
+          android:icon="@drawable/ic_new_game"
+          android:title="@string/new_game"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/help"
+          android:icon="@drawable/ic_help"
+          android:title="@string/help" />
+  </menu>
+
+  android:id = the id that the Java/backend will use to find this component
+  android:icon = drawable/image for the items image
+  android:title = text for that the item will actually display
+  android:showAsAction = specifies when and how this item should appear as an action item in the action bar
+    for example: show in action bar or only show in overflow menu
+
+  Example code to add a sub menu:
+  <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/file"
+          android:title="@string/file" >
+        <!-- "file" submenu -->
+        <menu>
+            <item android:id="@+id/create_new"
+                  android:title="@string/create_new" />
+            <item android:id="@+id/open"
+                  android:title="@string/open" />
+        </menu>
+    </item>
+  </menu>
+  

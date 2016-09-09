@@ -5,6 +5,7 @@
     <!--
     item id = id that program can call this UI
     item orderInCategory = the order of the items to be displayed
+        set as 100 so will be 100%, meaning that it will be at the BOTTOM of the overflow menu (the three dots)
     item title = name given in the UI
     item showAsAction = if the item should be shown in the action bar or the overflow menu
         "never" = never be in the action bar (therefore will always be in in the overflow menu)
