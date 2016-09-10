@@ -86,4 +86,35 @@ Defining a menu in XML
         </menu>
     </item>
   </menu>
-  
+
+  To use the menu in activity
+    Need to inflate the menu resource (convert XML into programmable object)
+      This is done by using MenuInfater.inflate()
+
+Creating an options menu
+  Where you should include actions and other options
+    options must be relevant to current context of activity
+    e.g.
+      search
+      compose email
+      settings
+
+  API level 10 or lower
+    options menu will appear at the bottom of the screen when menu button pressed
+      Can only hold up to 6 menu items on screen
+      Need to press "more" to view more options
+
+  API level 11 or higher
+    options are available at the top in the app bar
+    can show
+      app name
+      app icon
+      search
+      etc
+
+    If all the items don't fit on screen they can be places into a list inside the 3 dots
+      This is called the overflow menu
+
+  You can declare items in subclass of activity/fragment
+    if they both declare items in options menu (they are combined in the UI)
+  Activity items appear first, then the fragments
